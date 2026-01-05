@@ -1,3 +1,5 @@
+const tag =
+  "rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-200";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50 flex items-center justify-center px-4">
@@ -38,7 +40,80 @@ export default function HomePage() {
             </a>
           </div>
         </section>
+        {/* Projects Section */}
+        <section>
+          <h2 className="text-2xl font-bold">Projects</h2>
+          <p className="mt-2 text-slate-300 max-w-3xl">
+            A selection of projects showcasing my work across AI, computer vision,
+            and full-stack software engineering.
+          </p>
 
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {/* Project 1 */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+              <h3 className="text-lg font-semibold">
+                GPT Workout Planner (Serverless)
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Serverless backend that generates personalised workout plans using
+                OpenAI, with strict Firestore-based validation to prevent hallucinations.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="{tag}">Python</span>
+                <span className="{tag}">Firebase</span>
+                <span className="{tag}">OpenAI API</span>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+              <h3 className="text-lg font-semibold">
+                Swimming Pose Analysis + GPT Feedback
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                MediaPipe-based pose tracking system that extracts swimming technique
+                metrics and generates personalised coaching feedback using GPT.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="{tag}">MediaPipe</span>
+                <span className="{tag}">OpenCV</span>
+                <span className="{tag}">Python</span>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+              <h3 className="text-lg font-semibold">
+                Mask R-CNN Object Tracking
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Implemented IoU-based object tracking with per-class confidence
+                thresholds for stable multi-object detection across video frames.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="{tag}">Mask R-CNN</span>
+                <span className="{tag}">OpenCV</span>
+                <span className="{tag}">Python</span>
+              </div>
+            </div>
+
+            {/* Project 4 */}
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+              <h3 className="text-lg font-semibold">
+                Real Tuk Racing (50k+ downloads)
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                Cross-platform mobile racing game built with Unity featuring missions,
+                vehicle upgrades, and an in-game economy.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="{tag}">Unity</span>
+                <span className="{tag}">C#</span>
+                <span className="{tag}">Blender</span>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Placeholder for upcoming sections */}
         <section className="border-t border-slate-800 pt-6">
           <p className="text-sm text-slate-400">
