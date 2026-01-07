@@ -1,36 +1,45 @@
 
 import { ContactSection } from "./components/ContactSection";
+import CredentialsSection from "./components/CredentialsSection";
+import { Header } from "./components/Header";
 import ProjectSection from "./components/ProjectSection";
 import { SkillsSection } from "./components/SkillSection";
 
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-50 flex items-center justify-center px-4">
-      <div className="max-w-3xl w-full space-y-8">
+    <>  
+    <Header/>
+    <main className="min-h-screen bg-white text-slate-900 flex items-center justify-center px-4 space-y-14">
+      <div className="max-w-5xl w-full space-y-8">
         
         {/* Hero Section */}
-        <section>
-          <p className="text-sm uppercase tracking-[0.25em] text-sky-400">
-            AI Engineer · Computer Vision · LLM Systems
-          </p>
+        <section className="min-h-[calc(100vh-64px)] flex flex-col justify-center text-center">
 
-          <h1 className="mt-4 text-4xl sm:text-5xl font-bold leading-tight">
-            Hi, I&apos;m <span className="text-sky-400">Gayashan Dewanarayana</span>.
+          <h1 className="mt-4 text-4xl sm:text-6xl font-bold leading-tight">
+            <span className="text-sky-400">Gayashan Dewanarayana</span>
           </h1>
-
-          <p className="mt-4 text-base sm:text-lg text-slate-300">
-            I build intelligent systems that combine{" "}
-            <span className="font-semibold">AI, computer vision, and solid software engineering</span>.
-            From GPT-powered workout planners to swimming pose analysis engines, I enjoy turning
-            complex ideas into production-ready tools.
+          <p className="text-base uppercase tracking-[0.25em] text-sky-400 font-bold">
+            AI Engineer · Computer Vision · LLM Integration · Full-Stack Development 
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <p className="mt-4 text-base sm:text-lg text-slate-900">
+            I build intelligent systems powered by Artificial Intelligence from real time computer vision pipelines to 
+            LLM-driven workflows. With hands-on experience using OpenAI's GPT API, MediaPipe, and full-stack frameworks, 
+            I develop tools that are not just technically sound, but production-ready and user-focused.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 justify-center">
+            <a
+               href="#projects"
+               className="inline-flex items-center rounded-full border border-slate-300 px-5 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              >
+                View Projects ↓
+            </a>
             <a
               href="https://github.com/gayyaalpha"
               target="_blank"
-              className="inline-flex items-center rounded-full border border-sky-500 px-4 py-2 text-sm font-medium text-sky-100 hover:bg-sky-500/10"
+              className="inline-flex items-center rounded-full border border-sky-500 px-4 py-2 text-sm font-medium text-slate-950 text-sky-100 hover:bg-sky-500/10"
             >
               View my GitHub
             </a>
@@ -43,6 +52,7 @@ export default function HomePage() {
               Connect on LinkedIn
             </a>
           </div>
+          <CredentialsSection/>
         </section>
         <ProjectSection />
         <SkillsSection/>
@@ -50,5 +60,6 @@ export default function HomePage() {
 
       </div>
     </main>
+    </>
   );
 }
