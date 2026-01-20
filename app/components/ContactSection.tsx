@@ -1,40 +1,50 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+
 export function ContactSection() {
-    return (
-      <section>
-        <h2 className="text-2xl font-bold">Contact</h2>
-        <p className="mt-2 text-slate-300 max-w-3xl">
-          Want to collaborate or discuss opportunities? Reach out anytime.
-        </p>
-  
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="mailto:dewanarayana48@gmail.com"
-            className="inline-flex items-center rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-sky-400"
-          >
-            Email me
-          </a>
-  
-          <a
-            href="https://www.linkedin.com/in/gayashan-dewanarayana"
-            target="_blank"
-            className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-slate-900/40"
-          >
-            LinkedIn
-          </a>
-  
-          <a
-            href="https://github.com/gayyaalpha"
-            target="_blank"
-            className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-sm font-medium text-slate-100 hover:bg-slate-900/40"
-          >
-            GitHub
-          </a>
+  return (
+    <section
+      id="contact"
+      className="scroll-mt-24 border-t border-slate-200 bg-white"
+    >
+      <div className="mx-auto max-w-6xl px-4 py-16">
+        {/* Heading */}
+        <div className="max-w-2xl">
+          <h2 className="text-2xl font-bold text-slate-900">Contact</h2>
+          <p className="mt-3 text-slate-600">
+            If you’d like to discuss opportunities, projects, or collaborations,
+            feel free to reach out.
+          </p>
         </div>
-  
-        <p className="mt-4 text-sm text-slate-400">
-          Based in Australia · Open to AI Engineer / Software Engineer roles
-        </p>
-      </section>
-    );
-  }
-  
+
+        {/* Form */}
+        <form className="mt-10 max-w-2xl space-y-6">
+          <div className="space-y-2">
+            <Label htmlFor="name">Name</Label>
+            <Input id="name" placeholder="Your name" />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message">Message</Label>
+            <Textarea
+              id="message"
+              placeholder="Tell me a bit about what you’d like to discuss..."
+              rows={5}
+            />
+          </div>
+
+          <Button type="submit" className="rounded-full">
+            Send message
+          </Button>
+        </form>
+      </div>
+    </section>
+  );
+}

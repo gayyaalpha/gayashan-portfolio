@@ -1,6 +1,7 @@
 
 import { ContactSection } from "./components/ContactSection";
 import {CredentialsSection} from "./components/CredentialsSection";
+import { Footer } from "./components/footer";
 import { Header } from "./components/Header";
 import ProjectSection from "./components/ProjectSection";
 import { SkillsSection } from "./components/SkillSection";
@@ -55,9 +56,8 @@ export default function HomePage() {
           <CredentialsSection/>
         </section>
         <ProjectSection />
-        <SkillsSection/>
         <ContactSection/>
-
+        <Footer/>
       </div>
     </main>
     </>
