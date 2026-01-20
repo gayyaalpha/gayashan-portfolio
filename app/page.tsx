@@ -1,6 +1,6 @@
 
 import { ContactSection } from "./components/ContactSection";
-import CredentialsSection from "./components/CredentialsSection";
+import {CredentialsSection} from "./components/CredentialsSection";
 import { Header } from "./components/Header";
 import ProjectSection from "./components/ProjectSection";
 import { SkillsSection } from "./components/SkillSection";

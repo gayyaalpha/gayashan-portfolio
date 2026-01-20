@@ -33,14 +33,14 @@ const projects: Project[] = [
 
 export default function ProjectSection() {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-24">
       <h2 className="text-2xl font-bold">Projects</h2>
-      <p className="mt-2 text-slate-300 max-w-3xl">
+      <p className="mt-2 text-slate-30 max-w-3xl">
         A selection of projects that highlight my work across LLM systems,
         computer vision, and full-stack engineering.
       </p>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
+      <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {projects.map((p) => (
           <ProjectCard key={p.title} project={p} />
         ))}
