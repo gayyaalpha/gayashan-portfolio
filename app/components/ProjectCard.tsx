@@ -1,54 +1,70 @@
-export type Project = {
-    title: string;
-    description: string;
-    tech: string[];
-    github?: string;
-    demo?: string;
-  };
-  const tag = "rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
 
+export type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  github?: string;
+  demo?: string;
+};
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-200 shadow-sm transition hover:shadow-md">
-      <h3 className="text-lg font-semibold text-slate-900 group-hover:text-sky-500 transition">{project.title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600">
-        {project.description}
-      </p>
+    <Card className="h-full transition-shadow hover:shadow-md">
+      <CardHeader>
+        <CardTitle className="text-lg font-semibold text-slate-900">
+          {project.title}
+        </CardTitle>
+      </CardHeader>
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {project.tech.map((t) => (
-          <span key={t} className={tag}>
-            {t}
-          </span>
-        ))}
-      </div>
+      <CardContent className="space-y-4">
+        {/* Description */}
+        <p className="text-sm leading-relaxed text-slate-600">
+          {project.description}
+        </p>
 
-      <div className="mt-5 flex flex-wrap gap-3">
-        {project.github ? (
+        {/* Tech stack */}
+        <div className="flex flex-wrap gap-2">
+          {project.tech.map((item) => (
+            <span
+              key={item}
+              className="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      </CardContent>
+
+      <CardFooter className="flex gap-3">
+        {project.github && (
           <a
             href={project.github}
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 transition"
           >
             GitHub
           </a>
-        ) : null}
+        )}
 
-        {project.demo ? (
+        {project.demo && (
           <a
             href={project.demo}
             target="_blank"
-            className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 transition"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-sky-500 px-4 py-2 text-sm font-medium text-white hover:bg-sky-400 transition"
           >
-            Demo
+            Live Demo
           </a>
-        ) : (
-          <span className="inline-flex items-center rounded-full bg-slate-800 px-4 py-2 text-sm font-medium text-slate-300">
-            Demo (coming soon)
-          </span>
         )}
-      </div>
-    </div>
-  )
+      </CardFooter>
+    </Card>
+  );
 }

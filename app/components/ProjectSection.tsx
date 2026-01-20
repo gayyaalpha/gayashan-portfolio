@@ -23,7 +23,7 @@ const projects: Project[] = [
       github: "https://github.com/gayyaalpha",
     },
     {
-      title: "Real Tuk Racing (50k+ downloads)",
+      title: "Real Tuk Racing (100k+ downloads)",
       description:
         "Cross-platform mobile racing game based on Sri Lankan tuk-tuks, with missions, vehicle upgrades, and an in-game points economy.",
       tech: ["Unity", "C#", "Blender"],
