@@ -1,17 +1,15 @@
-# Gayashan Dewanarayana — Portfolio
+# AI Engineer Portfolio
 
-A personal portfolio website built with **Next.js (App Router)** and **Tailwind CSS** to showcase my AI + software engineering projects.
+Live site: https://<your-azure-url>
 
-## Live Demo
-Coming soon (deploying to Vercel).
+This repository contains my personal portfolio, built with Next.js and deployed on Azure Static Web Apps.
 
-## Tech Stack
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+## Highlights
+- Static site generation with Next.js
+- Component-driven UI with shadcn/ui and Tailwind CSS
+- CI/CD via GitHub Actions
+- Cloud deployment on Azure Static Web Apps
 
-## Run Locally
-```bash
+## Running locally
 npm install
 npm run dev
