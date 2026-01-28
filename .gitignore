@@ -39,3 +39,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# -------------------------
+# Python / Azure Functions
+# -------------------------
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Azure Functions local config (contains secrets)
+local.settings.json
+
+# Azure Functions artifacts
+.python_packages/
+.azure/
+
+# Logs
+*.log
+
