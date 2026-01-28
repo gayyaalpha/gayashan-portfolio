@@ -9,8 +9,6 @@ app = func.FunctionApp()
 def chat(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    param  = req.params.get("project") 
-
   # 1️⃣ Parse JSON body
     try:
         body = req.get_json()
@@ -31,7 +29,7 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         )
 
     # 3️⃣ Placeholder reply (LLM will go here next)
-    reply = f"You said: {message+param}"
+    reply = f"You said: {message}"
 
     # 4️⃣ Return structured JSON response
     return func.HttpResponse(

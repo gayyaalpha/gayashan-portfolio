@@ -8,7 +8,7 @@ export function Header() {
           </div> */}
           <nav className="flex items-center space-x-6 text-sm text-gray-700 font-medium">
             <a href="#projects" className="hover:text-blue-500">Projects</a>
-            <a href="#skills" className="hover:text-blue-500">Skills</a>
+            {/* <a href="#skills" className="hover:text-blue-500">Skills</a> */}
             <a href="#credentials" className="hover:text-blue-500">Credentials</a>
             <a href="#contact" className="hover:text-blue-500">Contact</a>
             <a

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "portfolio",
+    "title": "Personal Portfolio Website",
+    "summary": "A production-ready personal portfolio showcasing AI, backend, and full-stack projects, deployed using Azure Static Web Apps with CI/CD.",
+    "details": "Built using Next.js and Tailwind CSS, the portfolio highlights selected projects with technical context, architecture decisions, and live demos. The site is statically generated and deployed via GitHub Actions to Azure Static Web Apps.",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Azure Static Web Apps", "GitHub Actions"]
+  },
+  {
+    "id": "chatbot-backend",
+    "title": "Serverless Chatbot Backend",
+    "summary": "A Python-based serverless backend designed to power a portfolio chatbot.",
+    "details": "Implemented as an Azure Function using the Python v2 programming model. The backend exposes a JSON-based HTTP API, performs input validation, and will integrate LLM-based responses grounded in structured project data.",
+    "technologies": ["Python", "Azure Functions", "Postman"]
+  }
+]
