@@ -7,7 +7,7 @@
     "technologies": ["Next.js", "React", "Tailwind CSS", "Azure Static Web Apps", "GitHub Actions"]
   },
   {
-    "id": "chatbot-backend",
+    "id": "chatbot ",
     "title": "Serverless Chatbot Backend",
     "summary": "A Python-based serverless backend designed to power a portfolio chatbot.",
     "details": "Implemented as an Azure Function using the Python v2 programming model. The backend exposes a JSON-based HTTP API, performs input validation, and will integrate LLM-based responses grounded in structured project data.",
