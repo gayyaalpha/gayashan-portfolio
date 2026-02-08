@@ -3,53 +3,47 @@ from openai import OpenAI
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def generate_ai_response(message: str, projects: list) -> str:
-    if not projects:
-        return "I couldn’t find any relevant projects that match your question."
 
-    context = "\n".join(
-        f"- {p['title']}: {p['summary']}"
-        for p in projects
+PROMPT_ID = os.getenv("OPENAI_PROMPT_ID")
+PROMPT_VERSION = os.getenv("OPENAI_PROMPT_VERSION")
+
+def generate_ai_response(message: str) -> str:
+    """
+    Sends the user message to the OpenAI Prompt
+    which is already connected to the vector store.
+    """
+
+    response = client.responses.create(
+        prompt={
+            "id": PROMPT_ID,
+            "version": PROMPT_VERSION
+        },
+        input=[
+            {
+                "role": "user",
+                "content": [
+                    {"type": "input_text", "text": message}
+                ]
+            }
+        ]
     )
 
-    prompt = f"""
-You are an AI assistant helping explain my software engineering portfolio.
+    for output in response.output:
+        if output.type == "message":
+            for content in output.content:
+                if content.type == "output_text":
+                    return content.text
 
-User question:
-{message}
-
-Relevant projects:
-{context}
-
-Rules:
-- Only talk about the projects above
-- Do not invent projects
-- Be concise and professional
-- Speak in first person
-"""
-
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "You are a portfolio assistant."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.4
-    )
-
-    return response.choices[0].message.content.strip()
+    return "I’m sorry — I couldn’t generate a response."
 
 
-# ✅ Run locally without Azure
+# ✅ Local test (NO Azure required)
 if __name__ == "__main__":
-    from project_func import load_projects
-    from project_func import match_projects
+    while True:
+        user_input = input("\nAsk about my career (or 'exit'): ")
+        if user_input.lower() == "exit":
+            break
 
-    projects = load_projects()
-    message = "portfolio"
-
-    matched = match_projects(message, projects)
-    ai_reply = generate_ai_response(message, matched)
-
-    print("\nAI RESPONSE:\n")
-    print(ai_reply)
+        answer = generate_ai_response(user_input)
+        print("\nAI RESPONSE:\n")
+        print(answer)
