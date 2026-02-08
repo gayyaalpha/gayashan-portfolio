@@ -1,6 +1,6 @@
 # AI Engineer Portfolio
 
-Live site: https://<your-azure-url>
+Live site: https://wonderful-pebble-0682ad910.1.azurestaticapps.net/#skills
 
 This repository contains my personal portfolio, built with Next.js and deployed on Azure Static Web Apps.
 
