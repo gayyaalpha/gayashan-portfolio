@@ -1,5 +1,7 @@
 import os
 from openai import OpenAI
+import logging
+
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -12,6 +14,9 @@ def generate_ai_response(message: str) -> str:
     Sends the user message to the OpenAI Prompt
     which is already connected to the vector store.
     """
+
+    logging.info(f"Prompt ID: {PROMPT_ID}")
+    logging.info(f"Prompt Version: {PROMPT_VERSION}")
 
     response = client.responses.create(
         prompt={
@@ -38,12 +43,12 @@ def generate_ai_response(message: str) -> str:
 
 
 # ✅ Local test (NO Azure required)
-if __name__ == "__main__":
-    while True:
-        user_input = input("\nAsk about my career (or 'exit'): ")
-        if user_input.lower() == "exit":
-            break
+# if __name__ == "__main__":
+#     while True:
+#         user_input = input("\nAsk about my career (or 'exit'): ")
+#         if user_input.lower() == "exit":
+#             break
 
-        answer = generate_ai_response(user_input)
-        print("\nAI RESPONSE:\n")
-        print(answer)
+#         answer = generate_ai_response(user_input)
+#         print("\nAI RESPONSE:\n")
+#         print(answer)
