@@ -60,10 +60,9 @@ export default function ChatWidget() {
 
     setLoading(false);
   }
-
   return (
     <>
-      {/* Floating Trigger */}
+      {/* Floating Trigger Button */}
       <Button
         size="icon"
         onClick={() => setOpen(!open)}
@@ -71,37 +70,44 @@ export default function ChatWidget() {
       >
         {open ? <X className="w-4 h-4" /> : <MessageSquare className="w-4 h-4" />}
       </Button>
-
+  
       {open && (
         <Card className="fixed bottom-20 right-6 w-96 h-[500px] shadow-2xl border bg-background flex flex-col">
+          
           <CardHeader className="border-b font-semibold">
             AI Assistant
           </CardHeader>
-
-          <CardContent className="flex-1 p-0 flex flex-col">
-            <ScrollArea className="flex-1 p-4 space-y-4">
-              {messages.map((msg, i) => (
-                <div
-                  key={i}
-                  className={`max-w-[75%] rounded-xl px-3 py-2 text-sm ${
-                    msg.role === "user"
-                      ? "ml-auto bg-sky-500 text-white"
-                      : "bg-muted"
-                  }`}
-                >
-                  {msg.content}
-                </div>
-              ))}
-
-              {loading && (
-                <div className="text-muted-foreground text-sm">
-                  Thinking...
-                </div>
-              )}
-
-              <div ref={bottomRef} />
+  
+          <CardContent className="flex-1 p-0 flex flex-col min-h-0">
+            
+            {/* Scrollable Message Area */}
+            <ScrollArea className="flex-1 min-h-0 overflow-y-auto">
+              <div className="p-4 space-y-4">
+                
+                {messages.map((msg, i) => (
+                  <div
+                    key={i}
+                    className={`max-w-[75%] break-words rounded-xl px-3 py-2 text-sm ${
+                      msg.role === "user"
+                        ? "ml-auto bg-sky-500 text-white"
+                        : "bg-muted"
+                    }`}
+                  >
+                    {msg.content}
+                  </div>
+                ))}
+  
+                {loading && (
+                  <div className="text-muted-foreground text-sm">
+                    Thinking...
+                  </div>
+                )}
+  
+                <div ref={bottomRef} />
+              </div>
             </ScrollArea>
-
+  
+            {/* Input Area */}
             <div className="p-4 border-t flex gap-2">
               <Input
                 placeholder="Ask about my projects..."
@@ -111,9 +117,11 @@ export default function ChatWidget() {
               />
               <Button onClick={sendMessage}>Send</Button>
             </div>
+  
           </CardContent>
         </Card>
       )}
     </>
   );
+  
 }
