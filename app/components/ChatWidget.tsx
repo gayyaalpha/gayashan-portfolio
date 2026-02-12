@@ -39,7 +39,7 @@ export default function ChatWidget() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch( process.env.NEXT_PUBLIC_AZURE_FUNCTION_URL! +"/api/chat_trigger", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
