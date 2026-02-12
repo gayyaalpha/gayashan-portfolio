@@ -28,7 +28,11 @@ export default function ChatWidget() {
     if (!input.trim()) return;
 
     const userMessage = input;
-    const newMessages = [...messages, { role: "user", content: userMessage }];
+    
+    const newMessages: Message[] = [
+        ...messages,
+        { role: "user", content: userMessage }
+      ];
 
     setMessages(newMessages);
     setInput("");
