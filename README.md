@@ -13,4 +13,3 @@ This repository contains my personal portfolio, built with Next.js and deployed 
 ## Running locally
 npm install
 npm run dev
-deploy
