@@ -1,3 +1,4 @@
+import json
 import azure.functions as func
 import logging
 from ai_service import generate_ai_response
@@ -19,7 +20,13 @@ def chat_trigger(req: func.HttpRequest) -> func.HttpResponse:
 
     if message:
         ai_response = generate_ai_response(message)
-        return func.HttpResponse(f"OpenAI message: {ai_response}. ")
+        return func.HttpResponse(
+            json.dumps({
+                "answer": ai_response
+            }),
+            status_code=200,
+            mimetype="application/json"
+        )
     else:
         return func.HttpResponse(
              "Hello I'm Gayashan's AI assistant, how can I help you today?",

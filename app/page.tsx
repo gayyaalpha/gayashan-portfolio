@@ -1,4 +1,5 @@
 
+import ChatWidget from "./components/ChatWidget";
 import { ContactSection } from "./components/ContactSection";
 import {CredentialsSection} from "./components/CredentialsSection";
 import { Footer } from "./components/footer";
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <>  
     <Header/>
+    <ChatWidget/>
     <main className="min-h-screen bg-white text-slate-900 flex items-center justify-center px-4 space-y-14">
       <div className="max-w-5xl w-full space-y-8">
         
