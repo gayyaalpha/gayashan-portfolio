@@ -1,3 +1,4 @@
+import datetime
 import json
 import azure.functions as func
 import logging
@@ -32,3 +33,43 @@ def chat_trigger(req: func.HttpRequest) -> func.HttpResponse:
              "Hello I'm Gayashan's AI assistant, how can I help you today?",
              status_code=200
         )
+
+
+@app.route(route="contact_submit", methods=["POST"])
+def contact_submit(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info("Contact form submission received.")
+
+    try:
+        body = req.get_json()
+    except ValueError:
+        return func.HttpResponse(
+            "Invalid JSON",
+            status_code=400
+        )
+
+    name = body.get("name")
+    email = body.get("email")
+    message = body.get("message")
+
+    # Basic validation
+    if not name or not email or not message:
+        return func.HttpResponse(
+            json.dumps({"error": "All fields are required"}),
+            status_code=400,
+            mimetype="application/json"
+        )
+
+    # Simulate saving (replace with DB logic)
+    contact_data = {
+        "name": name,
+        "email": email,
+        "message": message,
+    }
+
+    print("New Contact Submission:", contact_data)
+
+    return func.HttpResponse(
+        json.dumps({"success": True}),
+        status_code=200,
+        mimetype="application/json"
+    )
