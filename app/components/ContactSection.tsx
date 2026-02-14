@@ -22,7 +22,7 @@ export function ContactSection() {
 
     try {
       const res = await fetch(
-        process.env.NEXT_PUBLIC_AZURE_FUNCTION_URL! + "api/contact_submit",
+        process.env.NEXT_PUBLIC_AZURE_FUNCTION_URL! + "/api/contact_submit",
         {
           method: "POST",
           headers: {
