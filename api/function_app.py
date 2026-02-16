@@ -1,8 +1,11 @@
-import datetime
+from datetime import datetime
 import json
+import os
 import azure.functions as func
 import logging
 from ai_service import generate_ai_response
+from azure.data.tables import TableServiceClient
+from azure.core.exceptions import ResourceExistsError
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
@@ -58,15 +61,22 @@ def contact_submit(req: func.HttpRequest) -> func.HttpResponse:
             status_code=400,
             mimetype="application/json"
         )
+      # Connect to Azure Table Storage
+    connection_string = os.environ["AzureWebJobsStorage"]
+    table_service = TableServiceClient.from_connection_string(connection_string)
+    table_client = table_service.get_table_client("contactMessages")
 
-    # Simulate saving (replace with DB logic)
-    contact_data = {
+    # Create entity
+    entity = {
+        "PartitionKey": "contact",
+        "RowKey": datetime.utcnow().isoformat(),
         "name": name,
         "email": email,
         "message": message,
+        "timestamp": datetime.utcnow().isoformat(),
     }
 
-    print("New Contact Submission:", contact_data)
+    table_client.create_entity(entity=entity)
 
     return func.HttpResponse(
         json.dumps({"success": True}),
