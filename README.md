@@ -50,4 +50,3 @@ Azure Functions:
 - `OPENAI_PROMPT_ID`
 - `OPENAI_PROMPT_VERSION`
 - `AzureWebJobsStorage` (Azure Table Storage connection string)
-new
