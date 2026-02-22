@@ -22,7 +22,7 @@ export default function HomePage() {
                 AI Engineer · Computer Vision · LLM Integration · Full-Stack
               </div>
 
-              <h1 className="mt-6 text-4xl font-bold leading-tight text-slate-900 sm:text-6xl whitespace-nowrap">
+              <h1 className="mx-auto mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-6xl whitespace-nowrap text-center">
                 Gayashan{" "}
                 <span className="bg-gradient-to-r from-sky-500 to-amber-500 bg-clip-text text-transparent">
                   Dewanarayana
