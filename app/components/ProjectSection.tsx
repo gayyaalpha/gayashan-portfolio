@@ -31,13 +31,20 @@ const projects: Project[] = [
 export default function ProjectSection() {
   return (
     <section id="projects" className="scroll-mt-24">
-      <h2 className="text-2xl font-bold">Projects</h2>
-      <p className="mt-2 text-slate-30 max-w-3xl">
-        A selection of projects that highlight my work across LLM systems,
-        computer vision, and full-stack engineering.
-      </p>
+      <div className="text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
+          Selected Work
+        </div>
+        <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl">
+          Projects
+        </h2>
+        <p className="mx-auto mt-3 max-w-3xl text-sm text-slate-600 sm:text-base">
+          A selection of projects that highlight my work across LLM systems,
+          computer vision, and full-stack engineering.
+        </p>
+      </div>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:gap-8">
         {projects.map((p) => (
           <ProjectCard key={p.title} project={p} />
         ))}

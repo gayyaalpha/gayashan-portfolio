@@ -57,20 +57,25 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-t border-slate-200 bg-gradient-to-b from-sky-50 via-white to-white"
+      className="scroll-mt-24"
     >
       <div className="mx-auto max-w-6xl px-4 py-16">
-        <div className="max-w-2xl">
-          <h2 className="text-2xl font-bold text-slate-900">Contact</h2>
-          <p className="mt-3 text-slate-600">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
+            Let&apos;s Talk
+          </div>
+          <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl">
+            Contact
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 sm:text-base">
             If you’d like to discuss opportunities, projects, or collaborations,
             feel free to reach out.
           </p>
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-500">
             Typical response time: within 24–48 hours.
           </p>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a
               href="https://github.com/gayyaalpha"
               target="_blank"
@@ -90,7 +95,7 @@ export function ContactSection() {
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:hello@gayashan.dev"
+              href="mailto:dewanarayana48@gmail.com"
               aria-label="Email"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-400"
             >
@@ -104,7 +109,7 @@ export function ContactSection() {
 
         <form
           onSubmit={handleSubmit}
-          className="mt-10 max-w-2xl space-y-6"
+          className="mx-auto mt-10 max-w-2xl space-y-6 rounded-3xl border border-amber-200/70 bg-white/70 p-6 shadow-sm backdrop-blur sm:p-8"
         >
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
