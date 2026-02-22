@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function ContactSection() {
   const [name, setName] = useState("");
@@ -23,6 +24,7 @@ export function ContactSection() {
     try {
       const res = await fetch(
         process.env.NEXT_PUBLIC_AZURE_FUNCTION_URL! + "/api/contact_submit",
+        // "http://localhost:7071" + "/api/contact_submit",
         {
           method: "POST",
           headers: {
@@ -55,7 +57,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 border-t border-slate-200 bg-white"
+      className="scroll-mt-24 border-t border-slate-200 bg-gradient-to-b from-sky-50 via-white to-white"
     >
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="max-w-2xl">
@@ -64,6 +66,40 @@ export function ContactSection() {
             If you’d like to discuss opportunities, projects, or collaborations,
             feel free to reach out.
           </p>
+          <p className="mt-2 text-sm text-slate-500">
+            Typical response time: within 24–48 hours.
+          </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-4">
+            <a
+              href="https://github.com/gayyaalpha"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-900 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
+            >
+              <Github className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gayashan-dewanarayana"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-sky-500 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-400"
+            >
+              <Linkedin className="h-5 w-5" />
+            </a>
+            <a
+              href="mailto:hello@gayashan.dev"
+              aria-label="Email"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-400"
+            >
+              <Mail className="h-5 w-5" />
+            </a>
+            <span className="text-sm text-slate-500">
+              Prefer email? I usually reply within 24–48 hours.
+            </span>
+          </div>
         </div>
 
         <form
