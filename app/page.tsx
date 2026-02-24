@@ -30,9 +30,12 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-5 text-base text-slate-700 sm:text-lg">
-                I build intelligent systems powered by Artificial Intelligence from real time computer vision pipelines to 
-                LLM-driven workflows. With hands-on experience using OpenAI&apos;s GPT API, MediaPipe, and full-stack frameworks, 
-                I develop tools that are not just technically sound, but production-ready and user-focused.
+                <span className="block">
+                  AI Engineer building production <span className="font-semibold text-sky-600">LLM systems</span> and scalable AI infrastructure.
+                </span>
+                <span className="mt-2 block text-slate-600 text-[0.95rem] sm:text-base">
+                  I architect structured, reliable, and deployable intelligent systems engineered for <span className="font-semibold text-amber-600">real world performance</span> at scale.
+                </span>
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center gap-3">

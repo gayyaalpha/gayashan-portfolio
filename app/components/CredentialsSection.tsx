@@ -19,7 +19,6 @@ export function CredentialsSection() {
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
           Verified Documents
         </div>
-        <h2 className="mt-4 text-3xl font-bold text-slate-900">Credentials</h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600">
           Download official documents for quick reference.
         </p>
