@@ -1,6 +1,6 @@
 # AI Engineer Portfolio
 
-Live site: https://wonderful-pebble-0682ad910.1.azurestaticapps.net
+Live site: https://ambitious-tree-053dd6010.4.azurestaticapps.net/
 
 Personal portfolio started to sharpen and showcase my skills as an artificial intelligence engineer. The frontend is built with Next.js, and the Python backend lives in the `api/` folder. It includes an AI chat widget powered by an Azure Function using OpenAI, plus a contact form that stores messages in Azure Table Storage.
 
