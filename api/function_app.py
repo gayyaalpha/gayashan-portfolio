@@ -3,7 +3,7 @@ import json
 import os
 import azure.functions as func
 import logging
-from ai_service import generate_ai_response
+from ai_agent import generate_ai_response
 from azure.data.tables import TableServiceClient
 from azure.core.exceptions import ResourceExistsError
 

@@ -5,3 +5,10 @@
 azure-functions
 openai
 azure-data-tables
+
+pinecone
+langchain-pinecone
+langchain-openai
+langchain-core
+langgraph
+python-dotenv
