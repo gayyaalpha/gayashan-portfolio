@@ -36,12 +36,12 @@ def query(question: str, k: int = 5):
     print(f"\nQuery: {question}")
     print(f"Top {k} results:\n")
     for i, doc in enumerate(results):
-        print(f"  Result {i+1} [{doc.metadata.get('section')}]:")
-        print(f"  {doc.page_content[:120].strip()}...")
+        print(f"  Result {i+1} [{doc.metadata.get('source', 'unknown')} | page {doc.metadata.get('page', '?')}]:")
+        print(f"  {doc.page_content.strip()}")
         print()
 
 
 if __name__ == "__main__":
-    question = sys.argv[1] if len(sys.argv) > 1 else "What is Gayashan's experience with RAG?"
-    k = int(sys.argv[2]) if len(sys.argv) > 2 else 10
+    question = sys.argv[1] if len(sys.argv) > 1 else "experience with rag architecture"
+    k = 5
     query(question, k)
