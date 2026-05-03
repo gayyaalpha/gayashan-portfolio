@@ -23,7 +23,7 @@ def chat_trigger(req: func.HttpRequest) -> func.HttpResponse:
             message = req_body.get('message')
 
     if message:
-        ai_response = generate_ai_response(message)
+        ai_response, _ = generate_ai_response(message)
         return func.HttpResponse(
             json.dumps({
                 "answer": ai_response

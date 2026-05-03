@@ -10,5 +10,9 @@ pinecone
 langchain-pinecone
 langchain-openai
 langchain-core
+langchain-text-splitters
 langgraph
+pypdf
 python-dotenv
+ragas
+datasets

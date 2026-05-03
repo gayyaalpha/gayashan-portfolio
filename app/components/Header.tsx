@@ -1,34 +1,47 @@
-export function Header() {
-    return (
-        <header className="sticky top-0 z-50 border-b border-amber-200/70 bg-white/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-3">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-100 text-sm font-bold text-sky-700">
-              GD
-            </div>
-            <div className="hidden sm:block">
-              <div className="text-sm font-semibold text-slate-900">
-                Gayashan Dewanarayana
-              </div>
-              <div className="text-xs text-slate-500">AI Engineer</div>
-            </div>
-          </div>
+"use client";
 
-          <nav className="flex items-center gap-4 text-sm font-medium text-slate-700 sm:gap-6">
-            <a href="#projects" className="hover:text-sky-600 transition">Projects</a>
-            <a href="#credentials" className="hover:text-sky-600 transition">Credentials</a>
-            <a href="#contact" className="hover:text-sky-600 transition">Contact</a>
-            <a
-              href="/assets/Gayashan_Resume.pdf"
-              className="rounded-full bg-sky-500 px-4 py-1.5 text-sm text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-400"
-            >
-              Resume
-            </a>
-          </nav>
+export function Header() {
+  return (
+    <header className="sticky top-0 z-50 bg-slate-900">
+      <div className="flex w-full items-center justify-between px-6 py-4 sm:px-8">
+        <div className="flex items-center gap-3">
+          <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500 text-sm font-bold text-white">
+            GD
+          </div>
+          <div className="hidden sm:block">
+            <div className="text-sm font-semibold text-white">
+              Gayashan Dewanarayana
+            </div>
+            <div className="text-xs text-slate-400">AI Engineer</div>
+          </div>
         </div>
-        <div className="h-[2px] w-full bg-gradient-to-r from-sky-400 via-amber-300 to-sky-400 opacity-70" />
-      </header>
-      
-    );
-  }
-  
+
+        <nav className="flex items-center gap-4 text-sm font-medium text-slate-300 sm:gap-6">
+          <span className="group relative inline-flex h-8 w-8">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-40 group-hover:animate-none"
+            />
+            <button
+              data-toggle-chat
+              aria-label="Toggle AI assistant"
+              title="Ask the ninja"
+              className="relative flex h-8 w-8 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-base leading-none shadow-sm transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-slate-700"
+            >
+              🥷
+            </button>
+          </span>
+          <a href="#projects" className="hover:text-sky-400 transition">Projects</a>
+          <a href="#credentials" className="hover:text-sky-400 transition">Credentials</a>
+          <a href="#contact" className="hover:text-sky-400 transition">Contact</a>
+          <a
+            href="/assets/Gayashan_Resume.pdf"
+            className="rounded-full bg-sky-500 px-4 py-1.5 text-sm text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-sky-400"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+    </header>
+  );
+}

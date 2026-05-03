@@ -10,10 +10,10 @@ import { SkillsSection } from "./components/SkillSection";
 
 export default function HomePage() {
   return (
-    <>  
+    <>
     <Header/>
-    <ChatWidget/>
     <main className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-amber-50 text-slate-900">
+      <ChatWidget/>
       {/* Hero Section */}
       <section className="relative overflow-hidden py-12 sm:py-16">
         <div className="mx-auto flex min-h-[calc(100vh-64px)] w-full max-w-6xl flex-col items-center justify-center px-4">
@@ -44,13 +44,6 @@ export default function HomePage() {
                   className="inline-flex items-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
                 >
                   View Projects ↓
-                </a>
-                <a
-                  href="#chat"
-                  data-open-chat
-                  className="inline-flex items-center rounded-full border border-amber-200 bg-white/80 px-5 py-2.5 text-sm font-medium text-slate-900 shadow-sm transition hover:-translate-y-0.5 hover:border-amber-300 hover:bg-white"
-                >
-                  Try the AI assistant →
                 </a>
                 <a
                   href="https://github.com/gayyaalpha"

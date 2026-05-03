@@ -48,6 +48,7 @@
 
 :root {
   --radius: 0.625rem;
+  --header-h: 68px;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -121,5 +122,14 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  main {
+    transition: padding-right 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 640px) {
+  main.chat-open {
+    padding-right: 420px;
   }
 }

@@ -1,0 +1,1344 @@
+(.venv) dewa@Mac api % python eval_ragas.py
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:28: DeprecationWarning: Importing faithfulness from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import faithfulness
+  from ragas.metrics import (
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:28: DeprecationWarning: Importing context_precision from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import context_precision
+  from ragas.metrics import (
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:28: DeprecationWarning: Importing context_recall from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import context_recall
+  from ragas.metrics import (
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:28: DeprecationWarning: Importing AnswerRelevancy from 'ragas.metrics' is deprecated and will be removed in v1.0. Please use 'ragas.metrics.collections' instead. Example: from ragas.metrics.collections import AnswerRelevancy
+  from ragas.metrics import (
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:42: DeprecationWarning: LangchainLLMWrapper is deprecated and will be removed in a future version. Use llm_factory instead: from openai import OpenAI; from ragas.llms import llm_factory; llm = llm_factory('gpt-4o-mini', client=OpenAI(api_key='...'))
+  judge_llm = LangchainLLMWrapper(
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:45: DeprecationWarning: LangchainEmbeddingsWrapper is deprecated and will be removed in a future version. Use the modern embedding providers instead: embedding_factory('openai', model='text-embedding-3-small', client=openai_client) or from ragas.embeddings import OpenAIEmbeddings, GoogleEmbeddings, HuggingFaceEmbeddings
+  judge_embeddings = LangchainEmbeddingsWrapper(
+/Users/dewa/AI Masters/Personal_projects/gayashan-portfolio/api/eval_ragas.py:52: DeprecationWarning: LangchainLLMWrapper is deprecated and will be removed in a future version. Use llm_factory instead: from openai import OpenAI; from ragas.llms import llm_factory; llm = llm_factory('gpt-4o-mini', client=OpenAI(api_key='...'))
+  answer_relevancy_llm = LangchainLLMWrapper(
+Running 5 questions through the LangGraph agent...
+
+  [1/5] What is Gayashan's current role and who does he work for?...
+cv_retrieval called with query: current role and employer
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana is currently working as an Artificial Intelligence Engineer at Onwards Analytics, based in Perth, Western Australia (Remote), since July 2025.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: University of Colombo - Sri Lanka 
+BSc (Hons) in Electronics and Information Technology | 2018–2023 Second Class (upper division) 
+ 
+REFERENCES: Available upon request.   RIGHT TO WORK: Full Work Rights in Australia.
+  [chunk 3] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 4] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: GAYASHAN DEWANARAYANA 
+LinkedIn| GitHub| Portfolio| dewanarayana48@gmail.com | (+61) 430 572 036 | Melbourne, AU 
+ 
+SUMMARY 
+AI Engineer with a Master's in Artificial Intelligence specialising in Natural Language Processing, currently shipping 
+production AI systems across computer vision, agentic orchestration, and retrieval-augmented generation. Built on a 
+solid data science foundation in predictive modelling, classification, and statistical analysis, paired with the engineering 
+discipline to take models from notebook to live service.  
+ 
+TECHNICAL SKILLS  
+Artificial Intelligence & Machine Learning: LLM integration, prompt engineering, RAG, Generative AI, Computer Vision 
+(object detection, pose estimation), Deep Learning (CNN -based models), NLP (tokenisation, embeddings, text 
+classification, sentiment analysis, named entity recognition), Model evaluation and confidence thresholding, LLM-as-
+a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning.
+  ────────────────────────────────────────────────────────────────
+
+  [2/5] What swimming metrics does Gayashan compute in the Glide Swim App...
+cv_retrieval called with query: Glide Swim App swimming metrics
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana developed an automated swimming technique analysis system for the Glide Swim App, which is used by swimming trainers across Australia and Canada. Within this app, Gayashan computes various swimming metrics using MediaPipe to extract biomechanical data from raw landmark coordinates. The specific metrics include:
+
+- Stroke count
+- Arm symmetry
+- Glide detection
+- Leading arm drop
+- Hip rotation metrics
+
+Additionally, Gayashan designed a frame-quality filtering system using anatomical limb-ratio validation and joint displacement thresholds to enhance the accuracy of the metrics computed.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  [chunk 2] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 3] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  ────────────────────────────────────────────────────────────────
+
+  [3/5] What vector database does Gayashan use in his portfolio RAG syste...
+cv_retrieval called with query: vector database RAG system
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana utilizes the Pinecone vector database in his portfolio RAG (Retrieval-Augmented Generation) system. He has also employed the OpenAI vector database in other projects within the RAG framework.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 3] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 4] [CV_Gayashan.pdf | page 3.0]: Predictive Analytics & Classification Suite | MSc Academic Projects 
+La Trobe University | 2024 
+• Built and compared Decision Tree and Random Forest classifiers on the German credit risk dataset; Random 
+Forest outperformed with 75.49% accuracy and 0.78 AUC. 
+• Applied a cost-sensitive evaluation matrix that penalised approving bad loans 10x more than rejecting good 
+ones, reflecting real banking risk asymmetry. 
+• Trained Logistic Regression and SVM models on the UCI Adult Income dataset (26,000+ records); SVM 
+achieved 85.5% test accuracy after GridSearchCV hyperparameter tuning. 
+• Built a full preprocessing pipeline: mode-based imputation for missing values, ordinal encoding for education 
+levels, one-hot encoding for categorical variables, and Min-Max normalisation. 
+• Validated all models using 10 -fold cross-validation, confusion matrix inspection, and ROC -AUC scoring to 
+ensure generalisation and guard against overfitting.
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  ────────────────────────────────────────────────────────────────
+
+  [4/15] What cloud platform is Gayashan's portfolio assistant deployed on...
+cv_retrieval called with query: cloud platform
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana's portfolio assistant is deployed on Azure Functions, with a frontend hosted on Azure Static Web Apps.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 2] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 3] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  [chunk 4] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  [chunk 5] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  ────────────────────────────────────────────────────────────────
+
+  [5/15] What is the Method8 AI Analytics Assistant and what technologies ...
+cv_retrieval called with query: Method8 AI Analytics Assistant
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  The Method8 AI Analytics Assistant is designed as a two-agent orchestration system, consisting of an Orchestrator and a SQL Agent, which enables natural language interaction with a PostgreSQL database. 
+
+The technologies used in the Method8 AI Analytics Assistant include:
+- n8n
+- PostgreSQL
+- SQL
+
+This system helps facilitate seamless communication between users and the database, allowing for efficient data retrieval and manipulation through natural language queries.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 2] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 3] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  ────────────────────────────────────────────────────────────────
+
+  [6/15] What LLM framework does Gayashan use for multi-agent routing in h...
+cv_retrieval called with query: LLM framework multi-agent routing portfolio
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana utilizes the LangGraph framework for multi-agent routing in his conversational AI portfolio assistant. This system features intent-based routing to specialized sub-agents, effectively supporting natural language queries regarding his experience. The project integrates a multi-agent backend powered by LangGraph.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 2] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: GAYASHAN DEWANARAYANA 
+LinkedIn| GitHub| Portfolio| dewanarayana48@gmail.com | (+61) 430 572 036 | Melbourne, AU 
+ 
+SUMMARY 
+AI Engineer with a Master's in Artificial Intelligence specialising in Natural Language Processing, currently shipping 
+production AI systems across computer vision, agentic orchestration, and retrieval-augmented generation. Built on a 
+solid data science foundation in predictive modelling, classification, and statistical analysis, paired with the engineering 
+discipline to take models from notebook to live service.  
+ 
+TECHNICAL SKILLS  
+Artificial Intelligence & Machine Learning: LLM integration, prompt engineering, RAG, Generative AI, Computer Vision 
+(object detection, pose estimation), Deep Learning (CNN -based models), NLP (tokenisation, embeddings, text 
+classification, sentiment analysis, named entity recognition), Model evaluation and confidence thresholding, LLM-as-
+a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning.
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 5] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  ────────────────────────────────────────────────────────────────
+
+  [7/15] What degree did Gayashan complete at La Trobe University and what...
+cv_retrieval called with query: degree completed at La Trobe University
+cv_retrieval called with query: WAM
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana completed a Master of Science (MSc) in Artificial Intelligence with a specialization in Natural Language Processing at La Trobe University, from 2023 to 2025. His Weighted Average Mark (WAM) is 76.07. 
+
+He also holds a Bachelor of Science (BSc) (Hons) in Electronics and Information Technology from the University of Colombo, Sri Lanka, completed in 2023, with a Second Class (upper division) classification.
+
+  ── CONTEXTS (10 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: University of Colombo - Sri Lanka 
+BSc (Hons) in Electronics and Information Technology | 2018–2023 Second Class (upper division) 
+ 
+REFERENCES: Available upon request.   RIGHT TO WORK: Full Work Rights in Australia.
+  [chunk 2] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  [chunk 3] [CV_Gayashan.pdf | page 3.0]: Predictive Analytics & Classification Suite | MSc Academic Projects 
+La Trobe University | 2024 
+• Built and compared Decision Tree and Random Forest classifiers on the German credit risk dataset; Random 
+Forest outperformed with 75.49% accuracy and 0.78 AUC. 
+• Applied a cost-sensitive evaluation matrix that penalised approving bad loans 10x more than rejecting good 
+ones, reflecting real banking risk asymmetry. 
+• Trained Logistic Regression and SVM models on the UCI Adult Income dataset (26,000+ records); SVM 
+achieved 85.5% test accuracy after GridSearchCV hyperparameter tuning. 
+• Built a full preprocessing pipeline: mode-based imputation for missing values, ordinal encoding for education 
+levels, one-hot encoding for categorical variables, and Min-Max normalisation. 
+• Validated all models using 10 -fold cross-validation, confusion matrix inspection, and ROC -AUC scoring to 
+ensure generalisation and guard against overfitting.
+  [chunk 4] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: GAYASHAN DEWANARAYANA 
+LinkedIn| GitHub| Portfolio| dewanarayana48@gmail.com | (+61) 430 572 036 | Melbourne, AU 
+ 
+SUMMARY 
+AI Engineer with a Master's in Artificial Intelligence specialising in Natural Language Processing, currently shipping 
+production AI systems across computer vision, agentic orchestration, and retrieval-augmented generation. Built on a 
+solid data science foundation in predictive modelling, classification, and statistical analysis, paired with the engineering 
+discipline to take models from notebook to live service.  
+ 
+TECHNICAL SKILLS  
+Artificial Intelligence & Machine Learning: LLM integration, prompt engineering, RAG, Generative AI, Computer Vision 
+(object detection, pose estimation), Deep Learning (CNN -based models), NLP (tokenisation, embeddings, text 
+classification, sentiment analysis, named entity recognition), Model evaluation and confidence thresholding, LLM-as-
+a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning.
+  [chunk 6] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 7] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 8] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  [chunk 9] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 10] [CV_Gayashan.pdf | page 1.0]: GAYASHAN DEWANARAYANA 
+LinkedIn| GitHub| Portfolio| dewanarayana48@gmail.com | (+61) 430 572 036 | Melbourne, AU 
+ 
+SUMMARY 
+AI Engineer with a Master's in Artificial Intelligence specialising in Natural Language Processing, currently shipping 
+production AI systems across computer vision, agentic orchestration, and retrieval-augmented generation. Built on a 
+solid data science foundation in predictive modelling, classification, and statistical analysis, paired with the engineering 
+discipline to take models from notebook to live service.  
+ 
+TECHNICAL SKILLS  
+Artificial Intelligence & Machine Learning: LLM integration, prompt engineering, RAG, Generative AI, Computer Vision 
+(object detection, pose estimation), Deep Learning (CNN -based models), NLP (tokenisation, embeddings, text 
+classification, sentiment analysis, named entity recognition), Model evaluation and confidence thresholding, LLM-as-
+a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning.
+  ────────────────────────────────────────────────────────────────
+
+  [8/15] What accuracy did Gayashan achieve with his DistilBERT model for ...
+cv_retrieval called with query: DistilBERT model for POS tagging accuracy
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana achieved over 95% accuracy with his DistilBERT model for POS tagging, demonstrating minimal overfitting across all epochs.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: Predictive Analytics & Classification Suite | MSc Academic Projects 
+La Trobe University | 2024 
+• Built and compared Decision Tree and Random Forest classifiers on the German credit risk dataset; Random 
+Forest outperformed with 75.49% accuracy and 0.78 AUC. 
+• Applied a cost-sensitive evaluation matrix that penalised approving bad loans 10x more than rejecting good 
+ones, reflecting real banking risk asymmetry. 
+• Trained Logistic Regression and SVM models on the UCI Adult Income dataset (26,000+ records); SVM 
+achieved 85.5% test accuracy after GridSearchCV hyperparameter tuning. 
+• Built a full preprocessing pipeline: mode-based imputation for missing values, ordinal encoding for education 
+levels, one-hot encoding for categorical variables, and Min-Max normalisation. 
+• Validated all models using 10 -fold cross-validation, confusion matrix inspection, and ROC -AUC scoring to 
+ensure generalisation and guard against overfitting.
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 4] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 5] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  ────────────────────────────────────────────────────────────────
+
+  [9/15] What hallucination mitigation strategies does Gayashan apply in h...
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana does not have information regarding hallucination mitigation strategies applied in his AI systems in the retrieved context.
+
+  ── CONTEXTS (0 chunks) ───────────────────────────────
+  ────────────────────────────────────────────────────────────────
+
+  [10/15] What is Needlesack and what did Gayashan achieve with it?...
+cv_retrieval called with query: Needlesack
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana co-founded Needlesack, a game development studio where he successfully shipped a cross-platform mobile game that has garnered over 100,000 downloads on the Google Play Store. This achievement highlights his entrepreneurial spirit and ability to deliver engaging mobile gaming experiences.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 2] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript 
+Cloud & Backend : Azure (Document Intelligence , Web App Service,  Functions, Static Web Apps), Firebase Cloud 
+Functions, Firestore, Serverless architectures, GitHub Actions (CI/CD). 
+AI Workflow & Engineering Tools: N8n, Git, GitHub, Postman, Swagger, VS Code, Cursor . 
+ 
+EXPERIENCE  
+Artificial Intelligence Engineer | Onwards Analytics  
+Perth, Western Australia (Remote) | Jul 2025 – Present 
+Glide Swim App | Website | App Store   
+• Developed an automated swimming technique analysis system  used by swimming trainers across Australia 
+and Canada, using MediaPipe to extract biomechanical metrics and GPT-4o to deliver coaching feedback. 
+• Engineered pose-tracking logic using MediaPipe's heavy model to compute stroke count, arm symmetry, glide 
+detection, leading arm drop, and hip rotation metrics from raw landmark coordinates.
+  [chunk 4] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 5] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  ────────────────────────────────────────────────────────────────
+
+  [11/15] What document extraction backends did Gayashan evaluate in his Do...
+cv_retrieval called with query: Document Intelligence API backends
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana evaluated two backends in his Document Intelligence API project: Azure Document Intelligence and Claude Vision. He conducted a systematic evaluation comparing them across factors such as determinism, OCR accuracy, schema consistency, and cost.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 5] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  ────────────────────────────────────────────────────────────────
+
+  [12/15] What machine learning models did Gayashan compare on the German c...
+cv_retrieval called with query: German credit risk dataset machine learning models
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana compared Decision Tree and Random Forest classifiers on the German credit risk dataset. The Random Forest classifier outperformed with an accuracy of 75.49% and an AUC of 0.78.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: Predictive Analytics & Classification Suite | MSc Academic Projects 
+La Trobe University | 2024 
+• Built and compared Decision Tree and Random Forest classifiers on the German credit risk dataset; Random 
+Forest outperformed with 75.49% accuracy and 0.78 AUC. 
+• Applied a cost-sensitive evaluation matrix that penalised approving bad loans 10x more than rejecting good 
+ones, reflecting real banking risk asymmetry. 
+• Trained Logistic Regression and SVM models on the UCI Adult Income dataset (26,000+ records); SVM 
+achieved 85.5% test accuracy after GridSearchCV hyperparameter tuning. 
+• Built a full preprocessing pipeline: mode-based imputation for missing values, ordinal encoding for education 
+levels, one-hot encoding for categorical variables, and Min-Max normalisation. 
+• Validated all models using 10 -fold cross-validation, confusion matrix inspection, and ROC -AUC scoring to 
+ensure generalisation and guard against overfitting.
+  [chunk 2] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  [chunk 3] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 4] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: GAYASHAN DEWANARAYANA 
+LinkedIn| GitHub| Portfolio| dewanarayana48@gmail.com | (+61) 430 572 036 | Melbourne, AU 
+ 
+SUMMARY 
+AI Engineer with a Master's in Artificial Intelligence specialising in Natural Language Processing, currently shipping 
+production AI systems across computer vision, agentic orchestration, and retrieval-augmented generation. Built on a 
+solid data science foundation in predictive modelling, classification, and statistical analysis, paired with the engineering 
+discipline to take models from notebook to live service.  
+ 
+TECHNICAL SKILLS  
+Artificial Intelligence & Machine Learning: LLM integration, prompt engineering, RAG, Generative AI, Computer Vision 
+(object detection, pose estimation), Deep Learning (CNN -based models), NLP (tokenisation, embeddings, text 
+classification, sentiment analysis, named entity recognition), Model evaluation and confidence thresholding, LLM-as-
+a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning.
+  ────────────────────────────────────────────────────────────────
+
+  [13/15] What is Gayashan's undergraduate degree and which university did ...
+cv_retrieval called with query: undergraduate degree and university
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana holds a Bachelor of Science (Hons) in Electronics and Information Technology from the University of Colombo, Sri Lanka, completed between 2018 and 2023, graduating with a Second Class (upper division).
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: University of Colombo - Sri Lanka 
+BSc (Hons) in Electronics and Information Technology | 2018–2023 Second Class (upper division) 
+ 
+REFERENCES: Available upon request.   RIGHT TO WORK: Full Work Rights in Australia.
+  [chunk 2] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  [chunk 3] [CV_Gayashan.pdf | page 3.0]: Predictive Analytics & Classification Suite | MSc Academic Projects 
+La Trobe University | 2024 
+• Built and compared Decision Tree and Random Forest classifiers on the German credit risk dataset; Random 
+Forest outperformed with 75.49% accuracy and 0.78 AUC. 
+• Applied a cost-sensitive evaluation matrix that penalised approving bad loans 10x more than rejecting good 
+ones, reflecting real banking risk asymmetry. 
+• Trained Logistic Regression and SVM models on the UCI Adult Income dataset (26,000+ records); SVM 
+achieved 85.5% test accuracy after GridSearchCV hyperparameter tuning. 
+• Built a full preprocessing pipeline: mode-based imputation for missing values, ordinal encoding for education 
+levels, one-hot encoding for categorical variables, and Min-Max normalisation. 
+• Validated all models using 10 -fold cross-validation, confusion matrix inspection, and ROC -AUC scoring to 
+ensure generalisation and guard against overfitting.
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  [chunk 5] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  ────────────────────────────────────────────────────────────────
+
+  [14/15] What backend framework does Gayashan use in his Document Intellig...
+cv_retrieval called with query: Document Intelligence API backend framework
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana utilizes the FastAPI framework in his Document Intelligence API. This API is a multi-backend document extraction service that exposes a REST API, returning structured JSON with field names.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: • Engineered schema aware SQL generation using filtered table descriptions to ensure deterministic, structure 
+aligned queries. 
+• Built the orchestration layer that interprets user intent, routes to the SQL agent, and manages downstream 
+pipeline execution. 
+• Used Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations 
+based on natural-language user requests. 
+Technologies: n8n, PostgreSQL, SQL, Anthropic API (Claude), JavaScript 
+ 
+Intern Artificial Intelligence Engineer | Blackbox Innovation 
+Melbourne, Australia | Mar 2025 – Jun 2025 
+• Built a serverless AI backend for a mobile workout planner, architecting the LLM plan generation pipeline and 
+RAG retrieval layer from the ground up. 
+• Designed RAG pipelines with semantic search using OpenAI Vector Database and Firestore to ground LLM 
+outputs and eliminate hallucinations. 
+• Built backend orchestration using Firebase Cloud Functions to integrate LLM -based plan generation into a
+  [chunk 5] [CV_Gayashan.pdf | page 2.0]: production API. 
+• Enforced structured ID -based generation and authoritative metadata retrieval from Firestore to ensure 
+deterministic AI outputs. 
+Technologies: Python, Firebase Cloud Functions, Firestore, OpenAI API, Postman, GitHub 
+ 
+Software Engineer | Mickiesoft     
+Sri Lanka | Nov 2022 – Nov 2023 
+• Developed full stack features for Goddeeris, a construction ERP system active in Belgium, across React JS 
+frontend and .NET Core API layers. 
+• Built an internship management system for Wayamba University of Sri Lanka using a hybrid Laravel and React 
+frontend with admin and student-facing backends. 
+Technologies: .NET Core, React Native, React JS, Laravel, Redux, RTK Query, MS SQL, Azure, Swagger, Git 
+ 
+Co-founder and Creative Director | Needlesack | Google Play Store | Live Game URL 
+Sri Lanka | Sep 2021 – Present 
+• Co-founded a game development studio and shipped a cross-platform mobile game to 100,000+ downloads.  
+ 
+ACADEMIC PROJECTS
+  ────────────────────────────────────────────────────────────────
+
+  [15/15] What design pattern did Gayashan use to make his document extract...
+cv_retrieval called with query: document extraction service extensible design pattern
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  Gayashan Dewanarayana used the Strategy pattern to design a pluggable BaseExtractor abstraction layer for his document extraction service. This architecture enables the Azure Document Intelligence, Claude Vision, and potential future backends to be swapped at runtime without requiring modifications to the existing pipeline.
+
+  ── CONTEXTS (5 chunks) ───────────────────────────────
+  [chunk 1] [CV_Gayashan.pdf | page 3.0]: Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo  
+• Architected a multi -backend document extraction service with Azure Document Intelligence and Claude 
+Vision extractors, exposing a REST API via FastAPI that returns structured JSON with field names. 
+• Designed a pluggable BaseExtractor  abstraction layer using the Strategy pattern, enabling Azure DI, Claude 
+Vision, and future backends to be swapped at runtime without modifying the pipeline. 
+• Conducted a systematic evaluation of Azure DI vs Claude Vision across determinism, OCR accuracy, schema 
+consistency, and cost. 
+Technologies: Python, FastAPI, Uvicorn, Azure Document Intelligence, Pydantic v2, Azure, CI/CD, REST APIs 
+ 
+EDUCATION 
+La Trobe University – Australia 
+MSc – Artificial Intelligence (Specialisation: Natural Language Processing), 2023–2025 | WAM = 76.07 
+University of Colombo - Sri Lanka
+  [chunk 2] [CV_Gayashan.pdf | page 3.0]: ensure generalisation and guard against overfitting. 
+Technologies: Python, Scikit-learn, Pandas, NumPy, Matplotlib 
+ 
+PERSONAL PROJECTS 
+Conversational AI Portfolio Assistant - Production RAG System with LangGraph Agent 
+GitHub | Live Portfolio  
+• Built a conversational AI assistant that lets portfolio visitors query my experience in natural language, 
+powered by a multi-agent LangGraph backend with intent-based routing to specialised sub-agents. 
+• Designed a semantic retrieval pipeline using OpenAI embeddings and a Pinecone vector database to ground 
+LLM responses in structured CV and project data. 
+• Deployed on Azure Functions with a Next.js frontend on Azure Static Web Apps, with automated CI/CD via 
+GitHub Actions and secure secrets management through Azure App Settings. 
+Technologies: Python, Node.js, React (Next.js), Azure, OpenAI API, Pinecone, LangGraph, LangChain 
+Document Intelligence API - Multi-Backend Document Extraction Service 
+GitHub | Live Demo
+  [chunk 3] [CV_Gayashan.pdf | page 1.0]: detection, leading arm drop, and hip rotation metrics from raw landmark coordinates. 
+• Designed a frame -quality filtering system using anatomical limb -ratio validation  and joint displacement 
+thresholds to reject implausible pose estimates before metric computation. 
+• Built an LLM pipeline using GPT -4o with structured JSON schema output to transform computed 
+biomechanical metrics into personalised coaching feedback. 
+Technologies: Python, OpenCV, MediaPipe, Matplotlib, NumPy, OpenAI API, JSON 
+ 
+Method8 AI Analytics Assistant | Website  
+• Designed a two -agent orchestration system with an Orchestrator and SQL Agent  in n8n enabling natural  
+language interaction with a PostgreSQL database.
+  [chunk 4] [CV_Gayashan.pdf | page 2.0]: ACADEMIC PROJECTS 
+NLP Classification & Modelling Suite | MSc Academic Projects  
+La Trobe University | 2025 
+• Built a Naive Bayes classifier from scratch for fake vs real news detection, achieving 82% accuracy using 
+manual log-likelihood computation and Laplace smoothing. 
+• Implemented a bigram language model with add-k smoothing for author attribution across literary texts. 
+• Developed a TF-IDF vectorisation pipeline from scratch for document classification, validated against Scikit -
+learn's implementation. 
+• Built and compared Logistic Regression and neural network classifiers for tweet sentiment analysis using 
+Word2Vec embeddings. 
+• Fine-tuned a DistilBERT transformer for POS tagging, exceeding 95% accuracy with minimal overfitting across 
+all epochs. 
+Technologies: Python, NLTK, Scikit-learn, TensorFlow, HuggingFace Transformers, Word2Vec, Pandas
+  [chunk 5] [CV_Gayashan.pdf | page 1.0]: a-Judge evaluation (RAGAS, DeepEval, Langfuse), Supervised & Unsupervised Learning. 
+Predictive Analytics & Statistical Modelling : Generalised Linear Models (GLM), Tree -based models (Decision Trees, 
+Random Forest), Gradient Boosting (XGBoost, LightGBM), Multivariate analysis, Feature engineering, Model validation 
+and performance evaluation. 
+AI Systems & Data Pipelines: Agentic AI systems (LangGraph, LangChain, Multi-Agent Orchestration), semantic search, 
+vector databases (Pinecone, OpenAI Vector Database), Structured LLM outputs (JSON pipelines), hallucination 
+mitigation strategies, retrieval grounding, schema-aware query generation. 
+Data & Storage: PostgreSQL, Firebase, Oracle, MS SQL, schema-aware data handling, backend data validation. 
+Programming & Frameworks: Python, FastAPI, Pydantic v2, Uvicorn, OpenCV, Pandas, NumPy, Matplotlib,  PyTorch, 
+Scikit-learn, Seaborn, TensorFlow, MediaPipe, REST API development, JavaScript
+  ────────────────────────────────────────────────────────────────
+
+
+Scoring with RAGAS (judge: gpt-4o)...
+
+Evaluating:  73%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                                                  | 44/60 [03:25<02:04,  7.77s/it]Exception raised in Job[24]: TimeoutError()
+Evaluating:  78%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎                                        | 47/60 [03:40<01:21,  6.27s/it]Exception raised in Job[26]: TimeoutError()
+Evaluating:  85%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                            | 51/60 [03:55<00:38,  4.33s/it]Exception raised in Job[43]: RateLimitError(Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-rrK4j5vYaMXKm8QRGj6ZXh2j on tokens per min (TPM): Limit 30000, Used 30000, Requested 2278. Please try again in 4.556s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}})
+Evaluating:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                      | 53/60 [03:55<00:18,  2.67s/it]Exception raised in Job[36]: TimeoutError()
+Evaluating:  93%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍            | 56/60 [04:07<00:12,  3.15s/it]Exception raised in Job[40]: TimeoutError()
+Evaluating: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 60/60 [04:31<00:00,  4.53s/it]
+
+── Per-question RAGAS Scores ─────────────────────────────────────────
+
+  Q1: What is Gayashan's current role and who does he work for?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.7929
+    context_precision : 0.2500
+    context_recall    : 1.0000
+
+  Q2: What swimming metrics does Gayashan compute in the Glide Swim App?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.9510
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q3: What vector database does Gayashan use in his portfolio RAG system?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.8003
+    context_precision : 0.7500
+    context_recall    : 1.0000
+
+  Q4: What cloud platform is Gayashan's portfolio assistant deployed on?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.6787
+    context_precision : 0.7500
+    context_recall    : 1.0000
+
+  Q5: What is the Method8 AI Analytics Assistant and what technologies does it use?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.9646
+    context_precision : 0.2500
+    context_recall    : 1.0000
+
+  Q6: What LLM framework does Gayashan use for multi-agent routing in his portfolio as…
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.7675
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q7: What degree did Gayashan complete at La Trobe University and what was his WAM?
+    faithfulness      : nan
+    answer_relevancy  : 0.5772
+    context_precision : nan
+    context_recall    : 1.0000
+
+  Q8: What accuracy did Gayashan achieve with his DistilBERT model for POS tagging?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.9355
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q9: What hallucination mitigation strategies does Gayashan apply in his AI systems?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.0000
+    context_precision : 0.0000
+    context_recall    : 0.0000
+
+  Q10: What is Needlesack and what did Gayashan achieve with it?
+    faithfulness      : nan
+    answer_relevancy  : 0.4622
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q11: What document extraction backends did Gayashan evaluate in his Document Intellig…
+    faithfulness      : nan
+    answer_relevancy  : 0.8522
+    context_precision : 1.0000
+    context_recall    : nan
+
+  Q12: What machine learning models did Gayashan compare on the German credit risk data…
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.8290
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q13: What is Gayashan's undergraduate degree and which university did he attend?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.7303
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+  Q14: What backend framework does Gayashan use in his Document Intelligence API?
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.8488
+    context_precision : 0.8333
+    context_recall    : 1.0000
+
+  Q15: What design pattern did Gayashan use to make his document extraction service ext…
+    faithfulness      : 1.0000
+    answer_relevancy  : 0.8191
+    context_precision : 1.0000
+    context_recall    : 1.0000
+
+── Average RAGAS Scores ──────────────────────────────────────────────
+{'faithfulness': 1.0000, 'answer_relevancy': 0.7340, 'context_precision': 0.7738, 'context_recall': 0.9286}
+
+── RAGAS Scores ──────────────────────────────────────────────────────
+{'faithfulness': 0.9846, 'answer_relevancy': 0.7888, 'context_precision': 0.6500, 'context_recall': 1.0000}
+─────────────────────────────────────────────────────────────────────
+results from the first run 
+{'faithfulness': 0.4000, 'answer_relevancy': 0.4993, 'context_precision': 0.1400, 'context_recall': 0.4000}
+
+
+── RAGAS Scores chunk size 500 ──────────────────────────────────────────────────────
+{'faithfulness': 0.6667, 'answer_relevancy': 0.4379, 'context_precision': 0.3333, 'context_recall': 1.0000}
+
+  [1/1] What is Gayashan's current role and who does he work for?...
+[INTENT] cv_question
+cv_retrieval called with query: current role and employer
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  I am currently a Software Engineer at Mickiesoft in Sri Lanka. I have been in this role since November 2022 and will continue until November 2023.
+
+── RAGAS Scores  chunk size 1000 ──────────────────────────────────────────────────────
+{'faithfulness': 1.0000, 'answer_relevancy': 0.3574, 'context_precision': 0.2500, 'context_recall': 1.0000}
+
+  [1/1] What is Gayashan's current role and who does he work for?...
+[INTENT] cv_question
+cv_retrieval called with query: current role and employer
+
+  ── ANSWER ──────────────────────────────────────────────────────
+  I am currently working as an Artificial Intelligence Engineer at Onwards Analytics, based in Perth, Western Australia (remote).
+
+────
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I am currently serving as an Artificial Intelligence Engineer at Onwards Analytics, where I have been working since July 2025.
+
+In the Glide Swim App, I compute several swimming metrics using MediaPipe. These metrics include:
+
+- **Stroke Count:** The total number of strokes taken.
+- **Arm Symmetry:** Analysis of the symmetry between both arms during swimming.
+- **Glide Detection:** Determining the glide phase of the swim stroke.
+- **Leading Arm Drop:** Identifying if the leading arm drops during the stroke.
+- **Hip Rotation:** Measuring the degree of hip rotation while swimming.
+
+In my portfolio RAG system, I use the Pinecone vector database.
+
+
+The Method8 AI Analytics Assistant is designed as a two-agent orchestration system consisting of an Orchestrator and SQL Agent. This system enables natural language interaction with a PostgreSQL database. Key functionalities include engineered schema-aware SQL generation using filtered table descriptions to ensure deterministic, structure-aligned queries. Additionally, it interprets user intent, routes to the SQL agent, and manages downstream pipeline execution. It utilizes Anthropic's API to transform queried data into structured Excel reports and PowerPoint presentations based on natural-language user requests.
+
+The technologies used in the Method8 AI Analytics Assistant include:
+
+- **n8n**: For orchestration
+- **PostgreSQL**: As the database system
+- **SQL**: For database queries
+- **Anthropic API (Claude)**: For transforming data into structured outputs
+- **JavaScript**: As part of the implementation.
+
+I use the LangGraph framework for multi-agent routing in my conversational AI portfolio assistant. This backend is powered with intent-based routing to specialized sub-agents, allowing for effective user interactions.
+
+
+I completed a Master of Science in Artificial Intelligence with a specialization in Natural Language Processing at La Trobe University, and my Weighted Average Mark (WAM) is 76.07.
+
+I achieved over 95% accuracy with my DistilBERT model for POS tagging, with minimal overfitting across all epochs.
+
+I apply several hallucination mitigation strategies in my AI systems, including:
+
+1. **Structured Generation**: I enforce structured ID-based generation and authoritative metadata retrieval methods to ensure deterministic outputs from the language models.
+   
+2. **RAG Pipelines**: I design Retrieval-Augmented Generation (RAG) pipelines with semantic search capabilities that utilize databases like OpenAI Vector Database and Firestore. This helps ground the outputs of the language models and eliminates hallucinations.
+
+These strategies are integral to my approach in developing reliable AI systems.
