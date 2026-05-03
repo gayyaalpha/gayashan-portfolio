@@ -2,7 +2,7 @@
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-slate-900">
+    <header className="sticky top-0 z-50 bg-black">
       <div className="flex w-full items-center justify-between px-6 py-4 sm:px-8">
         <div className="flex items-center gap-3">
           <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-sky-500 text-sm font-bold text-white">
@@ -32,7 +32,6 @@ export function Header() {
             </button>
           </span>
           <a href="#projects" className="hover:text-sky-400 transition">Projects</a>
-          <a href="#credentials" className="hover:text-sky-400 transition">Credentials</a>
           <a href="#contact" className="hover:text-sky-400 transition">Contact</a>
           <a
             href="/assets/Gayashan_Resume.pdf"
