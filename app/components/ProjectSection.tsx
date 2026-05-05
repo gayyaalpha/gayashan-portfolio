@@ -47,9 +47,6 @@ export default function ProjectSection() {
         <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
           Selected Work
         </div>
-        <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl">
-          Projects
-        </h2>
         <p className="mx-auto mt-3 max-w-3xl text-sm text-slate-600 sm:text-base">
           A selection of projects that highlight my work across LLM systems,
           computer vision, and full-stack engineering.

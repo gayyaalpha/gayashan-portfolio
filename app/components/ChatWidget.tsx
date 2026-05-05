@@ -11,7 +11,7 @@ type Message = {
 };
 
 export default function ChatWidget() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -19,6 +19,12 @@ export default function ChatWidget() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const asideRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(min-width: 640px)").matches) {
+      setOpen(true);
+    }
+  }, []);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });

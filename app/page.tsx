@@ -15,8 +15,8 @@ export default function HomePage() {
     <main className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-amber-50 text-slate-900">
       <ChatWidget/>
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-12 sm:py-16">
-        <div className="mx-auto flex min-h-[calc(100vh-64px)] w-full max-w-6xl flex-col items-center justify-center px-4">
+      <section className="relative overflow-hidden pt-[var(--header-h)]">
+        <div className="mx-auto flex min-h-[calc(85vh-var(--header-h))] w-full max-w-6xl flex-col items-center justify-center px-4">
             <div className="mx-auto w-full text-center">
               <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
                 AI Engineer · Computer Vision · LLM Integration · Full-Stack
@@ -62,13 +62,16 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
+            <div className="mt-14 w-full">
+              <SkillsSection/>
+            </div>
             <div className="mt-10 w-full">
               <CredentialsSection/>
             </div>
           </div>
       </section>
 
-      <section className="py-12 sm:py-16">
+      <section className="pt-4 pb-12 sm:pt-6 sm:pb-16">
         <div className="mx-auto w-full max-w-6xl px-4">
           <ProjectSection />
         </div>
