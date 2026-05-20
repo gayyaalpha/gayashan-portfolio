@@ -14,6 +14,7 @@ Requires in your environment (or .env file):
     PINECONE_INDEX_NAME = portfolio-db
 """
 
+import json
 import os
 from dotenv import load_dotenv
 
@@ -22,6 +23,7 @@ load_dotenv()
 from pypdf import PdfReader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
+
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone
@@ -54,12 +56,12 @@ def load_pdf(path: str) -> list[Document]:
 # ── Step 2: Split into overlapping chunks ─────────────────────────────────────
 def chunk_documents(docs: list[Document]) -> list[Document]:
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,       # ~100-125 tokens per chunk
-        chunk_overlap=100,    # repeat last 100 chars in next chunk
-        separators=["\n\n", "\n", ". ", " "]  # prefer paragraph breaks first
+        chunk_size=1000,
+        chunk_overlap=100,
+        separators=["\n\n", "\n", ". ",]   # only split on empty lines
     )
     chunks = splitter.split_documents(docs)
-    print(f"  Split into {len(chunks)} chunks (size=500, overlap=100)")
+    print(f"  Split into {len(chunks)} chunks (size=1000, overlap=100)")
     return chunks
 
 
@@ -75,7 +77,23 @@ def migrate():
     pages = load_pdf(CV_PDF_PATH)
 
     chunks = chunk_documents(pages)
-    print(chunks)
+
+    chunks_path = os.path.join(os.path.dirname(__file__), "chunks.json")
+    with open(chunks_path, "w", encoding="utf-8") as f:
+        json.dump(
+            [
+                {
+                    "index": i,
+                    "text": chunk.page_content,
+                    "metadata": chunk.metadata,
+                }
+                for i, chunk in enumerate(chunks, 1)
+            ],
+            f,
+            ensure_ascii=False,
+            indent=2,
+        )
+    print(f"  Wrote {len(chunks)} chunks to {chunks_path}")
 
     print("Deleting existing vectors from Pinecone...")
     pc.Index(PINECONE_INDEX_NAME).delete(delete_all=True)

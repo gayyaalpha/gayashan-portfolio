@@ -65,3 +65,11 @@ local.settings.json
 *.log
 
 .env.local
+
+# Claude Code workspace (per-user, not project state)
+.claude/
+
+# Scratch / eval outputs (reproducible via eval_ragas.py)
+api/eval_chunks.txt
+api/eval_output.txt
+/rag_eval_chat_recovered.md

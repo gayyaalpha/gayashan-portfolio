@@ -1259,18 +1259,38 @@ Evaluating: 100%|█████████████████████
     context_precision : 1.0000
     context_recall    : 1.0000
 
-── Average RAGAS Scores ──────────────────────────────────────────────
+── single agent  chunk size -1000 char ──────────────────────────────────────────────
 {'faithfulness': 1.0000, 'answer_relevancy': 0.7340, 'context_precision': 0.7738, 'context_recall': 0.9286}
 
 ── RAGAS Scores ──────────────────────────────────────────────────────
 {'faithfulness': 0.9846, 'answer_relevancy': 0.7888, 'context_precision': 0.6500, 'context_recall': 1.0000}
 ─────────────────────────────────────────────────────────────────────
-results from the first run 
+mulity router langgraph 
 {'faithfulness': 0.4000, 'answer_relevancy': 0.4993, 'context_precision': 0.1400, 'context_recall': 0.4000}
 
 
-── RAGAS Scores chunk size 500 ──────────────────────────────────────────────────────
+── single agent  chunk size -500 char ──────────────────────────────────────────────────────
 {'faithfulness': 0.6667, 'answer_relevancy': 0.4379, 'context_precision': 0.3333, 'context_recall': 1.0000}
+
+── Average RAGAS Scores chunk size 1500 r==5 chunks ──────────────────────────────────────────────
+{'faithfulness': 1.0000, 'answer_relevancy': 0.7971, 'context_precision': 0.7889, 'context_recall': 1.0000}
+
+── Average RAGAS Scores   chucks 11 with hybrid search  r==2 chunks ──────────────────────────────────────────────
+{'faithfulness': 0.8956, 'answer_relevancy': 0.8578, 'context_precision': 0.6000, 'context_recall': 0.6889}
+
+── Average RAGAS Scores  hybrid search + schema aware chunking  k==2 ──────────────────────────────────────────────
+{'faithfulness': 0.9111, 'answer_relevancy': 0.9052, 'context_precision': 0.4500, 'context_recall': 0.9286}
+
+── Average RAGAS Scores dense search + schema aware chunking k==2──────────────────────────────────────────────
+{'faithfulness': 0.9778, 'answer_relevancy': 0.8968, 'context_precision': 0.8667, 'context_recall': 0.8667}
+
+
+── Average RAGAS Scores k==5 dense search schema aware chunking──────────────────────────────────────────────
+{'faithfulness': 0.9778, 'answer_relevancy': 0.9004, 'context_precision': 1.0000, 'context_recall': 1.0000}
+
+
+── Average RAGAS Scores ──────────────────────────────────────────────
+{'faithfulness': 1.0000, 'answer_relevancy': 0.9143, 'context_precision': 0.4323, 'context_recall': 1.0000}
 
   [1/1] What is Gayashan's current role and who does he work for?...
 [INTENT] cv_question

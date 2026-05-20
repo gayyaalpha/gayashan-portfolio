@@ -176,7 +176,12 @@ def evaluate_pipeline():
     available = [m for m in metric_cols if m in df.columns]
     for i, row in df.iterrows():
         q = questions[i]
-        print(f"\n  Q{i+1}: {q[:80]}{'…' if len(q) > 80 else ''}")
+        a = answers[i]
+        print(f"\n  Q{i+1}: {q}")
+        print(f"  Answer:")
+        for line in a.splitlines() or [a]:
+            print(f"    {line}")
+        print(f"  Scores:")
         for m in available:
             print(f"    {m:18}: {float(row[m]):.4f}")
 

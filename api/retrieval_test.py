@@ -27,7 +27,7 @@ embeddings = OpenAIEmbeddings(
 )
 
 
-def query(question: str, k: int = 5):
+def query(question: str, k: int = 2):
     vector_store = PineconeVectorStore.from_existing_index(
         index_name=PINECONE_INDEX_NAME,
         embedding=embeddings,

@@ -3,3 +3,17 @@ __pycache__/
 local.settings.json
 .vscode/
 .env
+
+# Source / dev artefacts not needed at runtime.
+# Runtime only reads chunks.json (BM25 index) — the CV source files,
+# chunking pipeline, eval harness, and dev probes don't ship.
+CV_Gayashan.pdf
+CV_Gayashan.md
+chunk_markdown.py
+migrate_to_pinecone.py
+retrieval_test.py
+eval_ragas.py
+eval_chunks.txt
+eval_output.txt
+chunks_section_aware.json
+examples/

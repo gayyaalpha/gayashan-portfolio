@@ -64,9 +64,6 @@ export function ContactSection() {
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-sky-600">
             Let&apos;s Talk
           </div>
-          <h2 className="mt-5 text-3xl font-bold text-slate-900 sm:text-4xl">
-            Contact
-          </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 sm:text-base">
             If you’d like to discuss opportunities, projects, or collaborations,
             feel free to reach out.

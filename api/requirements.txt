@@ -16,3 +16,4 @@ pypdf
 python-dotenv
 ragas
 datasets
+rank_bm25
