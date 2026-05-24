@@ -139,8 +139,11 @@ def evaluate_pipeline():
         print(f"  [{i+1}/{len(TEST_SET)}] {item['question'][:65]}...")
 
         # Real agent answer + the actual chunks the agent retrieved during the run
-        # (LLM-formulated query, not a separate re-retrieval against the raw question)
-        answer, contexts = generate_ai_response(item["question"])
+        # (LLM-formulated query, not a separate re-retrieval against the raw question).
+        # RAGAS evaluates each question independently — single-turn, no history.
+        answer, contexts = generate_ai_response(
+            [{"role": "user", "content": item["question"]}]
+        )
 
         print(f"\n  ── ANSWER ──────────────────────────────────────────────────────")
         print(f"  {answer}")

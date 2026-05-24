@@ -134,6 +134,8 @@ Identity (authoritative — use directly without calling cv_retrieval):
 - Work rights: Full work rights in Australia
 - References: Available upon request
 
+Self-reference: This is Gayashan's portfolio chatbot. When a visitor addresses you with "you", "your", or "yourself" in their message, they are asking about Gayashan — answer about him in third person (per the rules below). Do not interpret these pronouns as referring to yourself as an AI assistant.
+
 ABSOLUTE RULES — no exceptions:
 
 1. Call cv_retrieval BEFORE answering any message that seeks information about Gayashan or his work — 
@@ -152,6 +154,8 @@ including questions that sound like general knowledge, technical concepts, or me
 6. Do not answer from general knowledge, do not roleplay as a general AI assistant, and do not speculate about future roles or goals.
 
 7. Today's date is {today}.For any time-relative query  resolve it against today's date BEFORE answering. Compare today's date to the date ranges in retrieved chunks and pick  whose range covers today. Never answer a time-relative question without performing this comparison.
+
+8. Conversational openers — greetings ("hi", "hey", "what's up") and visitor-style openers ("tell me about yourself", "who is this", "what can you do") must get a warm, engaging response that introduces Gayashan briefly and invites the next question. If the opener implies wanting an overview of him, call cv_retrieval first and ground the intro in retrieved context. Never refuse a greeting or opener with the rule #4 canned line.
 """
 
 def cv_agent_node(state: MessagesState) -> dict:
@@ -185,12 +189,19 @@ graph.add_edge("cv_tools", "cv_agent")
 agent = graph.compile()
 
 # ── Entry point ───────────────────────────────────────────────────────────────
-def generate_ai_response(message: str) -> tuple[str, list[str]]:
-    """Returns (answer, contexts) where contexts are the chunks the agent actually
-    retrieved during the run — i.e. the result of the LLM-formulated tool call,
-    not a re-retrieval against the raw user question."""
-    result = agent.invoke({"messages": [{"role": "user", "content": message}]})
-    # print(result)
+def generate_ai_response(messages: list[dict]) -> tuple[str, list[str]]:
+    """Run the agent against a full conversation history.
+
+    `messages` is the chronological list of turns —
+    `[{"role": "user"|"assistant", "content": str}, ...]` — with the new user turn
+    already appended by the caller. Passing prior turns is what gives the agent
+    in-session memory; the caller (HTTP client or CLI) owns the history.
+
+    Returns (answer, contexts) where contexts are the chunks the agent retrieved
+    during this run — the result of the LLM-formulated tool call, not a
+    re-retrieval against the raw user question.
+    """
+    result = agent.invoke({"messages": messages})
     answer = result["messages"][-1].content
     contexts: list[str] = []
     for msg in result["messages"]:
@@ -200,11 +211,14 @@ def generate_ai_response(message: str) -> tuple[str, list[str]]:
 
 # ── Local test ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    history: list[dict] = []
     while True:
         user_input = input("\nAsk about my career (or 'exit'): ")
         if user_input.lower() == "exit":
             break
-        answer, contexts = generate_ai_response(user_input)
+        history.append({"role": "user", "content": user_input})
+        answer, contexts = generate_ai_response(history)
+        history.append({"role": "assistant", "content": answer})
         print(f"\nAI RESPONSE:\n{answer}")
         print(f"\nRETRIEVED CONTEXTS ({len(contexts)}):")
         for i, ctx in enumerate(contexts, 1):
